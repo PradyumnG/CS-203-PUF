@@ -22,7 +22,7 @@
 
 module xor_encoding(
     input [31:0] r,
-    output [7:0] o
+    output [15:0] o
     );
     genvar i;
     generate for(i=0;i<32;i=i+4)begin
