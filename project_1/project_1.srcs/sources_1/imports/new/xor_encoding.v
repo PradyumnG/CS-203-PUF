@@ -25,8 +25,8 @@ module xor_encoding(
     output [15:0] o
     );
     genvar i;
-    generate for(i=0;i<32;i=i+4)begin
-        xor x1(o[i/4],r[i],r[i+1],r[i+2],r[i+3]);
+    generate for(i=0;i<32;i=i+2)begin
+        xor x1(o[i/2],~r[i],r[i+1]);
     end
     endgenerate
 endmodule
